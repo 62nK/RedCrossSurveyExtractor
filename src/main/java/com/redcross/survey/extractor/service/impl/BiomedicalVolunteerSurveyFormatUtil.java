@@ -5,25 +5,25 @@ import com.redcross.survey.extractor.domain.BiomedicalVolunteerSurvey;
 public class BiomedicalVolunteerSurveyFormatUtil {
 	
 	public static final String VALUE_SEPARATOR = ",";
-	public static final int ID = 0;
-	public static final int START_TIME = 1;
-	public static final int COMPLETION_TIME = 2;
-	public static final int EMAIL = 3;
-	public static final int NAME = 4;
-	public static final int FULL_NAME = 5;
-	public static final int STATE = 6;
-	public static final int VOLUNTEERING_DATE = 7;
-	public static final int BLOOD_DRIVE_NAME = 8;
-	public static final int VOLUNTEER_ROLE = 9;
-	public static final int Q1 = 10;
-	public static final int Q2 = 11;
-	public static final int Q3 = 12;
-	public static final int Q4 = 13;
-	public static final int Q5 = 14;
-	public static final int Q6 = 15;
-	public static final int CONCERN = 16;
-	public static final int COMMENT = 17;
-	public static final int QUESTION = 18;
+//	public static final int ID = 0;
+//	public static final int START_TIME = 1;
+//	public static final int COMPLETION_TIME = 2;
+//	public static final int EMAIL = 3;
+//	public static final int NAME = 4;
+	public static final int FULL_NAME = 0;
+	public static final int STATE = 1;
+	public static final int VOLUNTEERING_DATE = 2;
+	public static final int BLOOD_DRIVE_NAME = 3;
+	public static final int VOLUNTEER_ROLE = 4;
+	public static final int Q1 = 5;
+	public static final int Q2 = 6;
+	public static final int Q3 = 7;
+	public static final int Q4 = 8;
+	public static final int Q5 = 9;
+	public static final int Q6 = 10;
+	public static final int CONCERN = 11;
+	public static final int COMMENT = 12;
+	public static final int QUESTION = 13;
 
 	public static BiomedicalVolunteerSurvey csvLineToBiomedicalVolunteerSurvey(String line) {
 		
@@ -31,21 +31,21 @@ public class BiomedicalVolunteerSurveyFormatUtil {
 		
 		BiomedicalVolunteerSurvey biomedicalVolunteerSurvey = new BiomedicalVolunteerSurvey();
 		
-		try {
-			biomedicalVolunteerSurvey.setId(splitUpLine[ID]);
-		} catch(ArrayIndexOutOfBoundsException e) { System.err.print("col: "+e.getMessage()+" @line:"+ line+"\n");}
-		try {
-			biomedicalVolunteerSurvey.setStartTime(splitUpLine[START_TIME]);
-		} catch(ArrayIndexOutOfBoundsException e) { System.err.print("col: "+e.getMessage()+" @line:"+ line+"\n");}
-		try {
-			biomedicalVolunteerSurvey.setCompletionTime(splitUpLine[COMPLETION_TIME]);
-		} catch(ArrayIndexOutOfBoundsException e) { System.err.print("col: "+e.getMessage()+" @line:"+ line+"\n");}
-		try{
-			biomedicalVolunteerSurvey.setEmail(splitUpLine[EMAIL]);
-		} catch(ArrayIndexOutOfBoundsException e) { System.err.print("col: "+e.getMessage()+" @line:"+ line+"\n");}
-		try {
-			biomedicalVolunteerSurvey.setName(splitUpLine[NAME]);
-		} catch(ArrayIndexOutOfBoundsException e) { System.err.print("col: "+e.getMessage()+" @line:"+ line+"\n");}
+//		try {
+//			biomedicalVolunteerSurvey.setId(splitUpLine[ID]);
+//		} catch(ArrayIndexOutOfBoundsException e) { System.err.print("col: "+e.getMessage()+" @line:"+ line+"\n");}
+//		try {
+//			biomedicalVolunteerSurvey.setStartTime(splitUpLine[START_TIME]);
+//		} catch(ArrayIndexOutOfBoundsException e) { System.err.print("col: "+e.getMessage()+" @line:"+ line+"\n");}
+//		try {
+//			biomedicalVolunteerSurvey.setCompletionTime(splitUpLine[COMPLETION_TIME]);
+//		} catch(ArrayIndexOutOfBoundsException e) { System.err.print("col: "+e.getMessage()+" @line:"+ line+"\n");}
+//		try{
+//			biomedicalVolunteerSurvey.setEmail(splitUpLine[EMAIL]);
+//		} catch(ArrayIndexOutOfBoundsException e) { System.err.print("col: "+e.getMessage()+" @line:"+ line+"\n");}
+//		try {
+//			biomedicalVolunteerSurvey.setName(splitUpLine[NAME]);
+//		} catch(ArrayIndexOutOfBoundsException e) { System.err.print("col: "+e.getMessage()+" @line:"+ line+"\n");}
 		try {
 			biomedicalVolunteerSurvey.setFullName(splitUpLine[FULL_NAME]);
 		} catch(ArrayIndexOutOfBoundsException e) { System.err.print("col: "+e.getMessage()+" @line:"+ line+"\n");}
